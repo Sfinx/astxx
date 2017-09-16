@@ -415,6 +415,7 @@ namespace astxx {
       void connection::wait_event() {
          while (events.empty()) {
             read_message();
+            process_responses();
          }
       }
 
